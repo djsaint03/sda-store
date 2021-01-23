@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+{% include "promotion_message.html" %}
+
+
+<h3>Products List</h3>
+
+Total products = {{total_products}}
+
+    <table class="table">
+
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+
+
+            {% for p in products %}
+
+             <tr>
+                 <td>{{p.name}}</td>
+                 <td>{{p.price}}</td>
+                 <td>{{p.quantity}}</td>
+            </tr>
+
+            {% endfor %}
+
+    </table>
+
+{% endblock %}

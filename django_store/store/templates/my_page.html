@@ -1,16 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello page</title>
-
-    <style>
+{% extends 'base.html' %}
 
 
-    </style>
 
-</head>
-<body>
+{% block content %}
 
 <h3>Hello! Welcome to our website!</h3>
 
@@ -30,5 +22,7 @@ Welcome {{user_name}} ! Your number is {{user_number}} and your lucky number is 
 {% endfor %}
 
 
-</body>
-</html>
+ {% include "promotion_message.html" %}
+
+
+{% endblock %}
